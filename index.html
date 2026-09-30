@@ -1327,8 +1327,13 @@ input.invalid, textarea.invalid { border-color: #d9674e; background: #fff4f1; }
 
 // ---- Settings: fill these in to go live ----------------------------
 const CONFIG = {
-  // Paste a Calendly / Cal.com / Google booking-page link to embed a real scheduler.
-  // Leave empty to use the built-in demo calendar.
+  // Cal.com: your username, or username/event-slug, exactly as it appears after
+  // "cal.com/" in your booking link. e.g. "mrinal-gautam" shows all event types,
+  // "mrinal-gautam/intro-call" opens one event directly.
+  // When set, every "Book a session" button opens Cal.com's booking popup.
+  calLink: "mrinalgautam",
+  // Alternative: any other booking-page link (Calendly etc.) to embed in the booking modal.
+  // Leave both empty to use the built-in demo calendar.
   bookingUrl: "",
   // A form endpoint (e.g. https://formspree.io/f/xxxx) to receive "Connect" messages.
   // Leave empty and messages are only shown as sent (not delivered anywhere).
@@ -1776,6 +1781,26 @@ newStory();
 /* =========================================================
    Modals
    ========================================================= */
+/* ---------- Cal.com booking popup ---------- */
+if (CONFIG.calLink) {
+  // Official Cal.com embed loader (from Cal.com → Event type → Embed)
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "mrinal", { origin: "https://app.cal.com" });
+  Cal.ns.mrinal("ui", {
+    theme: "light",
+    cssVarsPerTheme: { light: { "cal-brand": "#C9553D" } },
+    hideEventTypeDetails: false,
+    layout: "month_view",
+  });
+  // Hand every booking button over to Cal.com instead of the demo calendar
+  $$('[data-open="booking"]').forEach((btn) => {
+    btn.removeAttribute("data-open");
+    btn.setAttribute("data-cal-link", CONFIG.calLink);
+    btn.setAttribute("data-cal-namespace", "mrinal");
+    btn.setAttribute("data-cal-config", JSON.stringify({ layout: "month_view", theme: "light" }));
+  });
+}
+
 const connectModal = $("#connectModal");
 const bookingModal = $("#bookingModal");
 
