@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mrinal Gautam · Play, Safety & Human Connection</title>
+  <meta name="description" content="Mrinal Gautam is an experiential learning and human connection facilitator. Workshops, 1:1 sessions and corporate trainings on play, emotional intelligence, shame and inner freedom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <a href="#top" class="logo-name">Mrinal Gautam</a><button class="logo-nose" id="logoNose" aria-label="Boop the red clown nose"></button>
+      </div>
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#offerings">Offerings</a>
+        <a href="#play">Playground</a>
+        <a href="#approach">Approach</a>
+        <button class="link-btn" data-open="connect">Connect</button>
+        <button class="btn btn-primary btn-sm" data-open="booking">Book a session</button>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Experiential learning &amp; human connection</p>
+          <h1>When you feel <span class="u-soft">safe</span>,<br>you remember how to <span class="play-word" aria-label="play"><span>p</span><span>l</span><span>a</span><span>y</span></span>.</h1>
+          <p class="lead">I create warm, honest, playful spaces where you can meet the parts of you that have been hiding, gently loosen the grip of shame, and find the aliveness that was waiting underneath.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" data-open="booking">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="4"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+              Book a session
+            </button>
+            <button class="btn btn-ghost" data-open="connect">Say hello <span class="wave" aria-hidden="true">👋</span></button>
+          </div>
+          <a href="#play" class="hand-note hero-note">psst… there are little games below ↓</a>
+        </div>
+
+        <div class="hero-art">
+          <span class="float-word fw1">curious</span>
+          <span class="float-word fw2">tender</span>
+          <span class="float-word fw3">silly</span>
+          <span class="float-word fw4">seen</span>
+          <span class="float-word fw5">brave</span>
+          <button class="buddy" id="buddy" aria-label="Say hi to the little buddy">
+            <span class="buddy-body"></span>
+            <span class="buddy-face">
+              <span class="eye"><span class="pupil"></span></span>
+              <span class="eye"><span class="pupil"></span></span>
+              <span class="cheek cheek-l"></span><span class="cheek cheek-r"></span>
+              <span class="buddy-nose"></span>
+              <span class="mouth"></span>
+            </span>
+          </button>
+          <div class="bubble" id="buddyBubble" role="status" aria-live="polite">Hi. You're welcome here, exactly as you are.</div>
+          <p class="hand-note art-note">go on, boop the nose</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>play</span><i>✿</i><span>safety</span><i>✿</i><span>presence</span><i>✿</i><span>tenderness</span><i>✿</i><span>spontaneity</span><i>✿</i><span>self-acceptance</span><i>✿</i><span>connection</span><i>✿</i><span>aliveness</span><i>✿</i>
+        <span>play</span><i>✿</i><span>safety</span><i>✿</i><span>presence</span><i>✿</i><span>tenderness</span><i>✿</i><span>spontaneity</span><i>✿</i><span>self-acceptance</span><i>✿</i><span>connection</span><i>✿</i><span>aliveness</span><i>✿</i>
+      </div>
+    </div>
+
+    <!-- ============ INSIGHT / BLOOM ============ -->
+    <section class="insight section" id="insight">
+      <div class="wrap insight-grid">
+        <div class="insight-copy reveal">
+          <p class="eyebrow">the heart of it</p>
+          <h2>When the nervous system doesn't feel safe, <em>play becomes inaccessible.</em></h2>
+          <p>When safety is present, inside us and around us, our natural capacity for play, expression and aliveness simply unfolds. Nothing to force or perform. Just enough room to bloom.</p>
+          <div class="slider-box">
+            <label for="safety" class="slider-label">Slide slowly. How safe does this moment feel?</label>
+            <input type="range" id="safety" min="0" max="100" value="12">
+            <div class="slider-ends"><span>guarded</span><span>at ease</span></div>
+            <p class="slider-read" id="safetyRead" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="bloom-stage reveal" id="bloomStage" aria-hidden="true">
+          <svg viewBox="0 0 300 380" class="bloom">
+            <g id="plant">
+              <path d="M150 370 C 146 320, 158 270, 150 200" class="stem"/>
+              <path d="M150 300 C 118 292, 102 270, 100 250 C 124 252, 144 270, 150 300 Z" class="leaf" id="leafL"/>
+              <path d="M151 268 C 180 262, 196 240, 198 222 C 176 224, 156 240, 151 268 Z" class="leaf" id="leafR"/>
+              <g id="head" transform="translate(150 190)">
+                <g id="petals"></g>
+                <circle r="16" class="bloom-center" id="bloomCenter"/>
+                <ellipse rx="20" ry="30" class="bud" id="bud"/>
+              </g>
+            </g>
+            <g id="sparks" class="sparks">
+              <text x="60" y="90">✦</text><text x="232" y="70">ha!</text><text x="40" y="170">wheee</text><text x="238" y="160">✦</text><text x="120" y="40">✿</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about section" id="about">
+      <div class="wrap about-grid">
+        <div class="portrait reveal">
+          <div class="portrait-frame">
+            <img src="img/mrinal.jpg" alt="Mrinal Gautam, smiling warmly, in a black t-shirt and glasses" width="866" height="1000" loading="lazy">
+          </div>
+          <span class="portrait-wave hand">that's me, hi! ↙</span>
+          <span class="sticker st1">trained at NID ✎</span>
+          <span class="sticker st2">hundreds of hearts,<br>online &amp; offline</span>
+          <span class="sticker st3">🔴 part-time clown</span>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">hello, I'm Mrinal</p>
+          <h2>This work began with my own <em>social anxiety.</em> I'm still meeting it, and it keeps teaching me.</h2>
+          <p>I'm an Experiential Learning &amp; Human Connection Facilitator, working where spontaneous expression, play, emotional intelligence and inner transformation meet.</p>
+          <p>I trained as a designer at the <strong>National Institute of Design</strong>, and I bring design thinking together with psychology and theatre to build spaces where deep, safe inner exploration can happen. I've facilitated intensive and short-format workshops with hundreds of people, both in person and online.</p>
+          <p>With playfulness, honesty and care, I help people meet hidden hurts, understand their inner parts, and move toward more freedom, safe connection and flow. Much of my work is with <strong>shame</strong>: how we can learn to accept ourselves and build a supportive, loving inner system for ourselves and for each other.</p>
+
+          <div class="roots">
+            <p class="roots-title">What my work draws from <span class="hand">(tap one)</span></p>
+            <div class="chips" id="rootChips" role="tablist" aria-label="Influences">
+              <button class="chip" role="tab" data-root="improv">Transformational improv</button>
+              <button class="chip" role="tab" data-root="meisner">Meisner technique</button>
+              <button class="chip" role="tab" data-root="clown">Sacred clowning</button>
+              <button class="chip" role="tab" data-root="navarasa">Navarasa · Natyashastra</button>
+              <button class="chip" role="tab" data-root="shaivism">Kashmiri Shaivism</button>
+              <button class="chip" role="tab" data-root="design">Design thinking</button>
+              <button class="chip" role="tab" data-root="psych">Psychology</button>
+            </div>
+            <p class="root-desc" id="rootDesc" aria-live="polite">Each of these is a doorway. Together they make a room where it's safe to be a little more yourself.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESONANCE ============ -->
+    <section class="resonance section">
+      <div class="wrap narrow reveal">
+        <p class="eyebrow center">how I can help</p>
+        <h2 class="center">You might be here if…</h2>
+        <p class="center muted">Tap whatever feels true. Nobody's watching, and there are no wrong answers.</p>
+        <div class="resonance-list" id="resonance">
+          <button class="res-item" aria-pressed="false">You freeze, blank out, or shrink in groups.</button>
+          <button class="res-item" aria-pressed="false">You quietly feel "too much", or not enough.</button>
+          <button class="res-item" aria-pressed="false">Shame shows up louder than you'd like.</button>
+          <button class="res-item" aria-pressed="false">You've forgotten how to be silly without judging yourself.</button>
+          <button class="res-item" aria-pressed="false">You long for more honest, deeper connection.</button>
+          <button class="res-item" aria-pressed="false">Your inner critic has a very loud microphone.</button>
+          <button class="res-item" aria-pressed="false">You lead a team that needs more trust and openness.</button>
+          <button class="res-item" aria-pressed="false">You're curious who you are when you're not performing.</button>
+        </div>
+        <div class="res-response" id="resResponse" aria-live="polite">
+          <p id="resText">…</p>
+          <button class="btn btn-primary btn-sm" data-open="connect" id="resCta" hidden>Let's talk about it</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OFFERINGS ============ -->
+    <section class="offerings section" id="offerings">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">ways we can work together</p>
+          <h2>Spaces for individuals, groups &amp; teams</h2>
+          <p class="muted">Offline and online. Intensive journeys or short, sweet sessions. Everything starts with making it safe enough.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card card-peach reveal">
+            <svg class="card-ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="32" r="14"/><circle cx="40" cy="32" r="14"/></svg>
+            <h3>1:1 Sessions</h3>
+            <p>Gentle, personal explorations of shame, social anxiety and your inner parts, using play, embodiment and honest conversation.</p>
+            <ul class="tags"><li>online</li><li>in person</li><li>ongoing or one-off</li></ul>
+            <button class="btn btn-card" data-open="booking">Book a session →</button>
+          </article>
+
+          <article class="card card-sage reveal">
+            <svg class="card-ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="12" r="5"/><circle cx="51" cy="24" r="5"/><circle cx="46" cy="47" r="5"/><circle cx="18" cy="47" r="5"/><circle cx="13" cy="24" r="5"/><circle cx="32" cy="32" r="4"/></svg>
+            <h3>Workshops</h3>
+            <p>Intensive and short-format group journeys: improv for inner freedom, meeting your inner clown, and the nine flavours of feeling through the Navarasa.</p>
+            <ul class="tags"><li>intensives</li><li>short formats</li><li>open groups</li></ul>
+            <button class="btn btn-card" data-open="connect" data-interest="Workshop">Ask about workshops →</button>
+          </article>
+
+          <article class="card card-lav reveal">
+            <svg class="card-ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 52h48M14 52V26l18-12 18 12v26"/><path d="M26 52V38h12v14"/></svg>
+            <h3>Corporate Trainings</h3>
+            <p>Psychological safety, emotional intelligence and real connection for teams. Playful, practical and backed by psychology.</p>
+            <ul class="tags"><li>teams</li><li>leaders</li><li>offsites</li></ul>
+            <button class="btn btn-card" data-open="connect" data-interest="Corporate training">Bring it to your team →</button>
+          </article>
+
+          <article class="card card-sun reveal">
+            <svg class="card-ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="10"/><path d="M32 8v8M32 48v8M8 32h8M48 32h8M15 15l6 6M43 43l6 6M15 49l6-6M43 21l6-6"/></svg>
+            <h3>Circles &amp; Collaborations</h3>
+            <p>Custom programs for schools, colleges, communities, retreats and festivals, designed with you around what your people need.</p>
+            <ul class="tags"><li>education</li><li>retreats</li><li>communities</li></ul>
+            <button class="btn btn-card" data-open="connect" data-interest="Collaboration">Let's co-create →</button>
+          </article>
+        </div>
+
+        <div class="corp-band reveal">
+          <div class="corp-copy">
+            <p class="eyebrow light">for teams &amp; organisations</p>
+            <h3>Teams play better when they feel safe, and they work better when they play.</h3>
+            <p>Trainings that go deeper than icebreakers without losing the joy.</p>
+            <button class="btn btn-light" data-open="connect" data-interest="Corporate training">Plan a training</button>
+          </div>
+          <ul class="corp-list">
+            <li><span>01</span> Psychological safety at work</li>
+            <li><span>02</span> Emotional intelligence for leaders</li>
+            <li><span>03</span> Deep listening &amp; authentic communication</li>
+            <li><span>04</span> Creative confidence through improv</li>
+            <li><span>05</span> Meeting shame, feedback &amp; failure with kindness</li>
+            <li><span>06</span> Team connection through play</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLAYGROUND ============ -->
+    <section class="playground section" id="play">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow">the playground</p>
+          <h2>Four tiny games to play with me</h2>
+          <p class="muted">No scores and no winning. Just a small taste of how a session feels.</p>
+        </div>
+
+        <div class="game-tabs reveal" role="tablist" aria-label="Games">
+          <button class="game-tab is-active" role="tab" aria-selected="true" aria-controls="g-weather" id="t-weather"><span>☁️</span> Inner Weather</button>
+          <button class="game-tab" role="tab" aria-selected="false" aria-controls="g-rasa" id="t-rasa" tabindex="-1"><span>🎡</span> Navarasa Spin</button>
+          <button class="game-tab" role="tab" aria-selected="false" aria-controls="g-critic" id="t-critic" tabindex="-1"><span>💌</span> Befriend the Critic</button>
+          <button class="game-tab" role="tab" aria-selected="false" aria-controls="g-yesand" id="t-yesand" tabindex="-1"><span>🎭</span> Yes, And…</button>
+        </div>
+
+        <div class="game-board reveal">
+          <!-- Game 1: Inner Weather -->
+          <div class="game is-active" id="g-weather" role="tabpanel" aria-labelledby="t-weather">
+            <div class="game-intro">
+              <h3>What's the weather inside you right now?</h3>
+              <p>Every kind of weather is welcome. Pick the one that feels closest.</p>
+            </div>
+            <div class="weather-row" id="weatherRow">
+              <button class="weather" data-w="sunny"><span>☀️</span>Sunny</button>
+              <button class="weather" data-w="cloudy"><span>⛅</span>Partly cloudy</button>
+              <button class="weather" data-w="rain"><span>🌧️</span>Rainy</button>
+              <button class="weather" data-w="storm"><span>⛈️</span>Stormy</button>
+              <button class="weather" data-w="fog"><span>🌫️</span>Foggy</button>
+              <button class="weather" data-w="rainbow"><span>🌈</span>After the rain</button>
+            </div>
+            <div class="weather-sky" id="weatherSky" data-w="none">
+              <div class="sky-fx" id="skyFx"></div>
+              <div class="weather-msg" id="weatherMsg" aria-live="polite">
+                <p class="hand big">I'm listening…</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 2: Navarasa Spin -->
+          <div class="game" id="g-rasa" role="tabpanel" aria-labelledby="t-rasa" hidden>
+            <div class="rasa-grid">
+              <div class="wheel-wrap">
+                <div class="wheel-pointer" aria-hidden="true"></div>
+                <div class="wheel" id="wheel"></div>
+                <button class="wheel-hub" id="spinBtn">SPIN</button>
+              </div>
+              <div class="rasa-card" id="rasaCard" aria-live="polite">
+                <p class="eyebrow">nine flavours of feeling</p>
+                <h3>Spin the Navarasa wheel</h3>
+                <p>The Natyashastra names nine <em>rasas</em>, the essential flavours of human emotion. Spin, and I'll give you a tiny improv challenge. (Yes, out loud. Nobody's listening. Probably.)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 3: Befriend the Critic -->
+          <div class="game" id="g-critic" role="tabpanel" aria-labelledby="t-critic" hidden>
+            <div class="game-intro">
+              <h3>Your inner critic is a part of you trying to keep you safe.</h3>
+              <p>Tap a card to hear what a kinder inner voice might say instead.</p>
+            </div>
+            <div class="critic-cards" id="criticCards"></div>
+            <form class="critic-form" id="criticForm">
+              <label for="criticInput" class="hand">What does your inner critic like to say?</label>
+              <div class="critic-input-row">
+                <input id="criticInput" type="text" maxlength="90" placeholder="e.g. Everyone will see I don't belong" autocomplete="off">
+                <button class="btn btn-primary btn-sm" type="submit">Soften it</button>
+              </div>
+              <p class="tiny muted">Stays on this page only. Nothing is sent or saved.</p>
+            </form>
+          </div>
+
+          <!-- Game 4: Yes, And -->
+          <div class="game" id="g-yesand" role="tabpanel" aria-labelledby="t-yesand" hidden>
+            <div class="game-intro">
+              <h3>Let's make up a story together</h3>
+              <p>The first rule of improv: accept what's offered, then add to it. You write a line, I'll say "Yes, and…"</p>
+            </div>
+            <div class="story" id="story" aria-live="polite"></div>
+            <form class="story-form" id="storyForm">
+              <input id="storyInput" type="text" maxlength="140" placeholder="Add the next line of the story…" autocomplete="off" aria-label="Your line">
+              <button class="btn btn-primary btn-sm" type="submit">Add</button>
+              <button class="btn btn-ghost btn-sm" type="button" id="stuckBtn">I'm stuck</button>
+            </form>
+            <button class="link-btn restart" id="newStory">↻ start a new story</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPROACH ============ -->
+    <section class="approach section" id="approach">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">what a session feels like</p>
+          <h2>Slow at first. Then surprisingly alive.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <h3>Arrive</h3>
+            <p>We settle in, check in, and agree on what makes this space safe. You always get to say no.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">2</span>
+            <h3>Warm up</h3>
+            <p>Gentle play, movement and a little silliness to wake the body up and quiet the judge.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">3</span>
+            <h3>Explore</h3>
+            <p>Improv, Meisner, clown and rasa work help us meet hidden hurts and the inner parts behind them.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">4</span>
+            <h3>Integrate</h3>
+            <p>We reflect with care and find small, real ways to carry the freedom back into your life.</p>
+          </li>
+        </ol>
+
+        <div class="pillars reveal">
+          <div class="pillar"><span class="pillar-dot" style="--c: var(--sun)"></span><h4>Playfulness</h4><p>Lightness isn't avoidance. It's a doorway into depth.</p></div>
+          <div class="pillar"><span class="pillar-dot" style="--c: var(--peach)"></span><h4>Honesty</h4><p>Real feelings, spoken plainly, held gently.</p></div>
+          <div class="pillar"><span class="pillar-dot" style="--c: var(--sage)"></span><h4>Care</h4><p>Your nervous system sets the pace. Always.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORDS (placeholder testimonials) ============ -->
+    <!-- TODO: Replace with real participant testimonials (with their permission). -->
+    <section class="words section">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow">words from the circle</p>
+          <h2>What people carry home</h2>
+        </div>
+        <div class="quotes reveal" id="quotes">
+          <figure class="quote q1">
+            <blockquote>"Placeholder: a participant's words about feeling safe enough to be silly for the first time in years."</blockquote>
+            <figcaption>[Participant name] · Workshop</figcaption>
+          </figure>
+          <figure class="quote q2">
+            <blockquote>"Placeholder: a team lead describing how the training changed the way their team listens to each other."</blockquote>
+            <figcaption>[Name, Role] · Corporate training</figcaption>
+          </figure>
+          <figure class="quote q3">
+            <blockquote>"Placeholder: someone sharing how they met their shame with kindness instead of hiding from it."</blockquote>
+            <figcaption>[Participant name] · 1:1 sessions</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final section" id="connect">
+      <div class="wrap">
+        <div class="final-card reveal">
+          <div class="final-blob" aria-hidden="true"></div>
+          <img class="final-avatar" src="img/mrinal-sm.jpg" alt="Mrinal Gautam" width="96" height="96">
+          <p class="eyebrow">whenever you're ready</p>
+          <h2>No pressure. No performance.<br>Just a conversation.</h2>
+          <p>Book a time that suits you, or send a note. Whatever you share will be met with care.</p>
+          <div class="hero-ctas center">
+            <button class="btn btn-primary" data-open="booking">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="4"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+              Open the calendar
+            </button>
+            <button class="btn btn-ghost" data-open="connect">Send a message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-name">Mrinal Gautam<span class="dot"></span></p>
+        <p class="muted">Experiential Learning &amp; Human Connection Facilitator</p>
+      </div>
+      <p class="footer-love hand">You are welcome here, exactly as you are.</p>
+      <div class="footer-links">
+        <a href="#" aria-label="Instagram (add link)">Instagram</a>
+        <a href="#" aria-label="LinkedIn (add link)">LinkedIn</a>
+        <a href="mailto:hello@example.com">Email</a>
+      </div>
+    </div>
+    <p class="wrap tiny muted footer-small">© <span id="year"></span> Mrinal Gautam. Made with care (and a little play).</p>
+  </footer>
+
+  <!-- ============ CONNECT MODAL ============ -->
+  <dialog class="modal" id="connectModal" aria-labelledby="connectTitle">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <div class="modal-body" id="connectBody">
+      <div class="modal-hello">
+        <img src="img/mrinal-sm.jpg" alt="" width="56" height="56">
+        <p class="eyebrow">let's connect</p>
+      </div>
+      <h2 id="connectTitle">Hi there. What's on your heart?</h2>
+      <p class="muted">Share as much or as little as you like. Mrinal reads every message personally.</p>
+      <form id="connectForm" novalidate>
+        <div class="field-row">
+          <label class="field">
+            <span>Your name</span>
+            <input name="name" type="text" required autocomplete="name" placeholder="What should I call you?">
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+          </label>
+        </div>
+
+        <fieldset class="field">
+          <legend>I'm reaching out about</legend>
+          <div class="pill-choices" id="interestChoices">
+            <label><input type="radio" name="interest" value="1:1 session" checked><span>1:1 session</span></label>
+            <label><input type="radio" name="interest" value="Workshop"><span>Workshop</span></label>
+            <label><input type="radio" name="interest" value="Corporate training"><span>Corporate training</span></label>
+            <label><input type="radio" name="interest" value="Collaboration"><span>Collaboration</span></label>
+            <label><input type="radio" name="interest" value="Just saying hi"><span>Just saying hi</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>How are you arriving today? <span class="muted">(optional)</span></legend>
+          <div class="mood-choices">
+            <label><input type="radio" name="mood" value="heavy"><span title="heavy">🌧️</span></label>
+            <label><input type="radio" name="mood" value="unsure"><span title="unsure">🌫️</span></label>
+            <label><input type="radio" name="mood" value="okay"><span title="okay">⛅</span></label>
+            <label><input type="radio" name="mood" value="hopeful"><span title="hopeful">🌱</span></label>
+            <label><input type="radio" name="mood" value="bright"><span title="bright">☀️</span></label>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span>Your message</span>
+          <textarea name="message" rows="4" required placeholder="What's bringing you here?"></textarea>
+        </label>
+        <p class="form-error" id="connectError" role="alert"></p>
+        <button class="btn btn-primary btn-block" type="submit">Send with care ♡</button>
+      </form>
+    </div>
+    <div class="modal-body success" id="connectSuccess" hidden>
+      <div class="success-blob" aria-hidden="true">♡</div>
+      <h2>Your message landed safely.</h2>
+      <p id="connectThanks">Thank you for reaching out. That takes courage. Mrinal will write back soon.</p>
+      <button class="btn btn-ghost" data-close>Back to the site</button>
+    </div>
+  </dialog>
+
+  <!-- ============ BOOKING MODAL ============ -->
+  <dialog class="modal modal-wide" id="bookingModal" aria-labelledby="bookingTitle">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <div class="modal-body">
+      <p class="eyebrow">book a time</p>
+      <h2 id="bookingTitle">Let's find a moment that feels right</h2>
+      <ol class="book-steps" aria-hidden="true">
+        <li class="is-on">Session</li><li>Date &amp; time</li><li>Your details</li>
+      </ol>
+
+      <!-- Step 1 -->
+      <div class="book-step" data-step="1">
+        <div class="session-types" id="sessionTypes">
+          <label class="stype"><input type="radio" name="stype" value="Intro call" data-mins="20" checked>
+            <span><strong>Intro call</strong><em>20 min · online</em><small>Say hi, ask anything, and see if it feels right.</small></span></label>
+          <label class="stype"><input type="radio" name="stype" value="1:1 session" data-mins="60">
+            <span><strong>1:1 session</strong><em>60 min · online / in person</em><small>A personal, playful exploration.</small></span></label>
+          <label class="stype"><input type="radio" name="stype" value="Workshop / corporate consult" data-mins="30">
+            <span><strong>Workshop or corporate consult</strong><em>30 min · online</em><small>Plan a workshop or training for your group.</small></span></label>
+        </div>
+        <div class="book-nav"><span></span><button class="btn btn-primary" data-next>Choose a time →</button></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="book-step" data-step="2" hidden>
+        <div class="cal-layout">
+          <div class="cal">
+            <div class="cal-head">
+              <button class="cal-arrow" id="calPrev" aria-label="Previous month">‹</button>
+              <p id="calMonth"></p>
+              <button class="cal-arrow" id="calNext" aria-label="Next month">›</button>
+            </div>
+            <div class="cal-dow"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+          <div class="slots">
+            <p class="slots-title" id="slotsTitle">Pick a date to see open times</p>
+            <div class="slot-list" id="slotList"></div>
+            <p class="tiny muted">Times shown in IST (India Standard Time).</p>
+          </div>
+        </div>
+        <div class="book-nav"><button class="btn btn-ghost" data-back>← Back</button><button class="btn btn-primary" data-next id="toDetails" disabled>Continue →</button></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="book-step" data-step="3" hidden>
+        <div class="book-summary" id="bookSummary"></div>
+        <form id="bookForm" novalidate>
+          <div class="field-row">
+            <label class="field"><span>Your name</span><input name="name" required autocomplete="name"></label>
+            <label class="field"><span>Email</span><input name="email" type="email" required autocomplete="email"></label>
+          </div>
+          <label class="field"><span>Anything you'd like Mrinal to know? <span class="muted">(optional)</span></span>
+            <textarea name="note" rows="3" placeholder="No need to explain everything. Just a little context helps."></textarea></label>
+          <p class="form-error" id="bookError" role="alert"></p>
+          <div class="book-nav"><button class="btn btn-ghost" type="button" data-back>← Back</button><button class="btn btn-primary" type="submit">Confirm booking</button></div>
+        </form>
+      </div>
+
+      <!-- Done -->
+      <div class="book-step success" data-step="4" hidden>
+        <div class="success-blob" aria-hidden="true">✿</div>
+        <h2>You're booked in.</h2>
+        <p id="bookDone"></p>
+        <div class="hero-ctas center">
+          <a class="btn btn-primary" id="gcalLink" target="_blank" rel="noopener">Add to Google Calendar</a>
+          <button class="btn btn-ghost" data-close>Done</button>
+        </div>
+      </div>
+
+      <!-- External scheduler embed (used when CONFIG.bookingUrl is set) -->
+      <div class="book-embed" id="bookEmbed" hidden></div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
